@@ -1,0 +1,23 @@
+[project]
+name = "movies"  # Added the required name property
+dependencies = [
+  "Django>=5.1.7",
+  "django-filter==24.3",
+  "django-graphql-jwt==0.4.0",
+  "graphene==3.4.3",
+  "graphene-django==3.2.2",
+  "graphene-file-upload==1.3.0",
+  "setuptools",
+  "django-cors-headers",
+]
+
+version = "0.1.0"  # Added the required version property
+description = "Backend package"  # Add description
+readme = "README.md"  # Reference a README file
+license = { text = "Proprietary License" }  # Add license
+authors = [{ name = "Oleksandr Liakhov" }]  # Add authors
+optional-dependencies = { test = ["coverage", "pytest", "pytest-cov", "pytest-runner"] }  # Add optional dependencies
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
