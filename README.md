@@ -3,6 +3,12 @@
 - [Django GraphQL](./django-graph/README.md) 
 - [Graph React](./graph-react/README.md)
 
+## Docker
+```bash
+docker build -t django-graph .
+docker run -p 8000:8000 django-graph
+```
+
 
 # ROADMAP 
  - [x] Make MVP
