@@ -26,7 +26,8 @@ SECRET_KEY = '$#k(ceis49u0fs@ob137_&mf4w1zkd!3yr5-j)n-dgt+d(wmvg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
+# SECURITY WARNING: define the correct hosts in production!
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition

@@ -3,7 +3,6 @@ from graphene import relay
 from graphene_django.types import DjangoObjectType
 from .models import Movie, Director
 import graphql_jwt
-from graphql_jwt.decorators import login_required
 from graphene_django.filter import DjangoFilterConnectionField
 from graphql_relay import from_global_id
 
