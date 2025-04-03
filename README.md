@@ -2,20 +2,18 @@
 
 - [Django GraphQL](./django-graph/README.md) 
 - [Graph React](./graph-react/README.md)
-
-## Docker
-```bash
-docker build -t django-graph .
-docker run -p 8000:8000 django-graph
-docker tag django-graph:latest eleutherius69/django-graph:latest
-docker push eleutherius69/django-graph:latest
-```
+- [k8s](./k8s/README.md)
 
 
 # ROADMAP 
  - [x] Make MVP
- - [ ] Add more documentation
- - [ ] Add to docker
- - [ ] Move to kuber
+ - [x] Add more documentation
+ - [x] Add to docker
+ - [x] Add possibility run on kuber
+ - [ ] Add possibility run on docker compose
  - [ ] Add CI/CD in github actions
  - [x] Add linter in github actions
+ - [ ] Updated NodeJS to last LTS
+ - [ ] Add normal linter and fix and formate all code for python
+ - [ ] Add normal linter and fix and formate all code for react
+ - [ ] Fix problem with access to debug GraphQL via k8s 
