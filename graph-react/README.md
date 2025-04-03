@@ -1,3 +1,8 @@
+# Graph React
+This project is a React application that provides a graphical interface for interacting with a GraphQL API. It allows users to visualize and manipulate graph data in an intuitive way.
+
+Node JS:  v16.0
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

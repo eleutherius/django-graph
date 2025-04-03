@@ -1,12 +1,8 @@
-# test_graphql
-test_graphql test project 
+# GraphQL API
 
-# Installation
-```
-python3 -m venv venv
-source venv/bin/activate
-pip install ./django-graphql
-```
+- [Django GraphQL](./django-graph/README.md) 
+- [Graph React](./graph-react/README.md)
+
 
 # ROADMAP 
  - [x] Make MVP
