@@ -10,10 +10,10 @@
  - [x] Add more documentation
  - [x] Add to docker
  - [x] Add possibility run on kuber
- - [ ] Add possibility run on docker compose
+ - [x] Add possibility run on docker compose
  - [ ] Add CI/CD in github actions
  - [x] Add linter in github actions
- - [ ] Updated NodeJS to last LTS
+ - [x] Updated NodeJS to last LTS
  - [ ] Add normal linter and fix and formate all code for python
  - [ ] Add normal linter and fix and formate all code for react
- - [ ] Fix problem with access to debug GraphQL via k8s 
+ - [ ] Fix problem with access to debug GraphQL via k8s

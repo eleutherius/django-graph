@@ -6,11 +6,12 @@
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install ./django-graphql
+pip install ./django-graph
 ```
 ### Run the app
 
 ```bash
+cd django-graph
 python manage.py runserver 0.0.0.0:8000
 ```
 

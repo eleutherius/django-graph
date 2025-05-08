@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css';
 import Movies from './movies';
-import { ApolloProvider } from '@apollo/react-hooks';
-import ApolloClient from 'apollo-boost';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: "http://0.0.0.0:8000/graphql/"
-})
+  uri: "http://localhost:8000/graphql/", // Використовуйте localhost
+  cache: new InMemoryCache(),
+});
 
 function App() {
-
   return (
     <ApolloProvider client={client}>
       <div className="App">

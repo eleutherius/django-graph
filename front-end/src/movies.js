@@ -28,6 +28,9 @@ function Movies() {
   if (error) return `Error! ${error.message}`;
   
 
+  
+  
+
   const movies = data.allMovies.edges;
 
   return (
