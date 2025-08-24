@@ -5,6 +5,7 @@ import {Typography } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import NewMovies from './movies';
 import client from './apolloClient';
+import MovieForm from './components/MovieForm';
 
 const theme = createTheme({
   palette: {
@@ -18,7 +19,6 @@ const theme = createTheme({
 });
 
 
-
 function App() {
   return (
       <ThemeProvider theme={theme}>
@@ -27,6 +27,7 @@ function App() {
       </Typography>
       <ApolloProvider client={client}>
       <div className="App">
+        <MovieForm />
         <NewMovies />
       </div>
     </ApolloProvider>
