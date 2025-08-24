@@ -16,7 +16,7 @@ const CREATE_MOVIE = gql`
   }
 `;
 
-export default function MovieForm() {
+export default function MovieForm({ onSuccess }) {
   const [form, setForm] = useState({ title: '', year: '' });
   const [createMovie, { data, loading, error }] = useMutation(CREATE_MOVIE);
 
@@ -30,9 +30,10 @@ export default function MovieForm() {
     const yearInt = parseInt(form.year, 10);
     if (!form.title || Number.isNaN(yearInt)) return;
     try {
-      await createMovie({ variables: { title: form.title, year: yearInt } });
-      // Optional: clear form on success
+      const res = await createMovie({ variables: { title: form.title, year: yearInt } });
       setForm({ title: '', year: '' });
+      const createdMovie = res?.data?.createMovie?.movie;
+      if (onSuccess && createdMovie) onSuccess(createdMovie);
     } catch (_e) {
       // Handled by 'error'
     }
