@@ -23,10 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$#k(ceis49u0fs@ob137_&mf4w1zkd!3yr5-j)n-dgt+d(wmvg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True  # for local development
 
 # SECURITY WARNING: define the correct hosts in production!
 ALLOWED_HOSTS = ["*"]
+
+# Optional: keep local dev simple
+SECURE_SSL_REDIRECT = False  # avoid forced HTTPS locally
 
 # Application definition
 
@@ -72,7 +75,7 @@ AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
 ]
 
-ROOT_URLCONF = 'movies.urls'
+ROOT_URLCONF = 'movies.urls'  # ensure this is set
 
 CORS_ORIGIN_ALLOW_ALL = True
 

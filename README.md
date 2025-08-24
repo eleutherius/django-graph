@@ -1,7 +1,7 @@
 # GraphQL API
 
-- [Django GraphQL](./django-graph/README.md) 
-- [Graph React](./graph-react/README.md)
+- [Django GraphQL](./front-end/README.md) 
+- [Graph React](./back-end/README.md)
 - [k8s](./k8s/README.md)
 
 
@@ -17,3 +17,4 @@
  - [ ] Add normal linter and fix and formate all code for python
  - [ ] Add normal linter and fix and formate all code for react
  - [ ] Fix problem with access to debug GraphQL via k8s
+ - [ ] Add beautiful UI

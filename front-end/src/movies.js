@@ -2,6 +2,10 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 
+
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+
+
 const GET_MOVIES = gql`
   {
     allMovies {
@@ -20,27 +24,34 @@ const GET_MOVIES = gql`
   }
 `;
 
-function Movies() {
 
+function NewMovies() {
   const { loading, error, data } = useQuery(GET_MOVIES);
-
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
-  
-
-  
-  
-
   const movies = data.allMovies.edges;
-
   return (
-      <div>
-        <h1>List of movies - React</h1>
-        { movies.map( movie => {
-          return <h2 key={movie.node.id}>{movie.node.title} ({movie.node.year})</h2>
-        })}
-      </div>
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>ID</TableCell>
+            <TableCell>Title</TableCell>
+            <TableCell>Year</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          { movies.map((row) => (
+            <TableRow key={row.node.id}>
+              <TableCell>{row.node.id}</TableCell>
+              <TableCell>{row.node.title}</TableCell>
+              <TableCell>{row.node.year}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 }
 
-export default Movies;
+export default NewMovies;

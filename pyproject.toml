@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=66", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "backend"
+version = "0.0.1"
+description = "Backend package"
+readme = { file = "back-end/README.md", content-type = "text/markdown" }
+authors = [{ name = "Oleksandr Liakhov", email = "eleutherius69@gmail.com" }]
+license = { text = "Proprietary License" }
+requires-python = ">=3.9"
+dependencies = [
+  "Django",
+  "graphene-django",
+  "graphene",
+  "django-graphql-jwt",
+]
+
+[project.optional-dependencies]
+test = [
+  "coverage",
+  "pytest",
+  "pytest-cov",
+  "pytest-runner"
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["back-end"]

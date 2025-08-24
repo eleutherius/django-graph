@@ -9,7 +9,7 @@ install_deps = [
                    'graphene-django',
                    'graphene',
                    'django-graphql-jwt',
-               ],
+               ]  # fixed: was a tuple due to trailing comma
 test_deps = [
     'coverage',
     'pytest',
@@ -21,6 +21,7 @@ setup(name='backend',
       version='0.0.1',
       description="Backend package",
       long_description=README,
+      long_description_content_type="text/markdown",
       author='Oleksandr Liakhov',
       author_email='eleutherius69@gmail.com',
       license='Proprietary License',
